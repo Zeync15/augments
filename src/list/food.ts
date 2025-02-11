@@ -1,0 +1,15 @@
+export const foodList = [
+  "Chinese",
+  "Western",
+  "Thai",
+  "Fast Food",
+  "Sushi",
+  "Mamak",
+  "Burger",
+  "Pasta",
+  "Pizza",
+  "Pastry",
+  "KBBQ",
+  "Vietnam",
+  "Pasar Malam",
+];
