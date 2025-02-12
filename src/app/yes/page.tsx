@@ -28,9 +28,9 @@ const Yes = () => {
             <Augment
               nav={"/food"}
               icon={<PiBowlFoodLight size={200} />}
-              title={"Meal Prep"}
+              title={"Hunger for Power"}
               description={
-                "Spend 40 gold to gain 20% bonus health for 4 rounds. Reduces focus for the first 2 rounds."
+                "Consume the nearest food and gain 60% temporary health. Lose focus for the first round."
               }
               subDescription={"Good preparation fuels the body!"}
             />
@@ -40,7 +40,7 @@ const Yes = () => {
               icon={<PiAirplaneTiltLight size={200} />}
               title={"Call to Adventure"}
               description={
-                "Spend 100+ gold for few games. Get teleport to a brand new location."
+                "Spend 100+ gold for few games. Teleport to a new location."
               }
               subDescription={"Catch flights not feelings."}
             />
@@ -56,17 +56,15 @@ const Yes = () => {
             <Augment
               nav={"/dessert"}
               icon={<PiCakeLight size={200} />}
-              title={"Sugar Rush"}
-              description={
-                "Spend 20 gold for 20% attack speed for 2 rounds, but -10% after."
-              }
+              title={"Caramelized Comforts"}
+              description={"Spend 20 gold for 20% attack speed for 2 rounds."}
               subDescription={"A sugar high is great—until it's not."}
             />
           ) : (
             <Augment
               nav={"/random"}
               icon={<PiQuestionLight size={200} />}
-              title={"Expect D Unexpected"}
+              title={"Pandora's Items"}
               description={"???"}
               subDescription={"Random bullshit go."}
             />
@@ -92,7 +90,7 @@ const Yes = () => {
               nav={"/todo"}
               icon={<PiNoteLight size={200} />}
               title={"Forward Thinking"}
-              description={"Todo list"}
+              description={"Todo list for the future."}
               subDescription={"Something in the back of your mind."}
             />
           )}
