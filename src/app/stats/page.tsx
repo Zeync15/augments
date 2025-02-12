@@ -39,13 +39,13 @@ const stats = () => {
   const result = calculateDateDifference("2020-02-14");
 
   return (
-    <div className="w-[700px] mx-auto text-3xl">
+    <div className="mx-auto w-[1000px] text-3xl gap-4 flex flex-col">
       <div className="">Together since 2020 - 02 - 14</div>
       <div className="">
-        Together for: {result.years} Years {result.months} Months {result.days} Days
+        Together for: {result.years} Years {result.months} Months {result.days}{" "}
+        Days
       </div>
-
-     
+      <div className="">Country we have been to: Singapore, Japan, China</div>
     </div>
   );
 };
