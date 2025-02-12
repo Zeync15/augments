@@ -23,7 +23,7 @@ const NextButton = () => {
       </div>
 
       {/* Audio element */}
-      <audio ref={audioRef} src="/mouse-click.mp3" preload="auto" />
+      <audio ref={audioRef} src="/next-augment.mp3" preload="auto" />
     </div>
   );
 };

@@ -31,7 +31,7 @@ const Augment = ({
         <div className="h-0.5 bg-black w-full mr-4"></div>
       </div>
 
-      <div className="text-center mt-4  mx-4 text-xl">{description}</div>
+      <div className="text-center mt-4  mx-6 text-xl">{description}</div>
 
       <div className="text-center mx-4 mb-4 text-sm absolute bottom-0 left-0 right-0">
         {subDescription}
