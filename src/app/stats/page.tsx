@@ -1,5 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { collection, getDocs, orderBy, query } from "firebase/firestore";
+import { db } from "@/firebase";
+interface CountriesProps {
+  id: string;
+  country: string;
+  createdAt: Date;
+}
 
 const Stats = () => {
   const [result, setResult] = useState({
@@ -7,6 +14,8 @@ const Stats = () => {
     months: 0,
     days: 0,
   });
+
+  const [countries, setCountries] = useState<CountriesProps[]>([]);
 
   const calculateDateDifference = (
     dateString: string
@@ -48,6 +57,20 @@ const Stats = () => {
     setResult(result);
   }, []);
 
+  useEffect(() => {
+    fetchItems();
+  }, []);
+
+  const fetchItems = async () => {
+    const q = query(collection(db, "country"), orderBy("createdAt", "asc"));
+    const querySnapshot = await getDocs(q);
+    const countriesList: CountriesProps[] = querySnapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    })) as CountriesProps[];
+    setCountries(countriesList);
+  };
+
   return (
     <div className="mx-auto w-[1000px] text-3xl gap-4 flex flex-col">
       <div className="">Together since 2020 - 02 - 14</div>
@@ -55,7 +78,10 @@ const Stats = () => {
         Together for: {result.years} Years {result.months} Months {result.days}{" "}
         Days
       </div>
-      <div className="">Country we have been to: Singapore, Japan, China</div>
+      <div className="">
+        Country we have been to:{" "}
+        {countries.map((item) => item.country).join(", ")}
+      </div>
     </div>
   );
 };
