@@ -1,6 +1,13 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 
-const stats = () => {
+const Stats = () => {
+  const [result, setResult] = useState({
+    years: 0,
+    months: 0,
+    days: 0,
+  });
+
   const calculateDateDifference = (
     dateString: string
   ): { years: number; months: number; days: number } => {
@@ -36,7 +43,10 @@ const stats = () => {
     return { years, months, days };
   };
 
-  const result = calculateDateDifference("2020-02-14");
+  useEffect(() => {
+    const result = calculateDateDifference("2020-02-14");
+    setResult(result);
+  }, []);
 
   return (
     <div className="mx-auto w-[1000px] text-3xl gap-4 flex flex-col">
@@ -50,4 +60,4 @@ const stats = () => {
   );
 };
 
-export default stats;
+export default Stats;
