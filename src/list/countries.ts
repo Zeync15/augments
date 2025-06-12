@@ -1,7 +1,7 @@
 export const countriesList = [
   "Japan",
   "Vietnam",
-  "'Taiwan'",
+  "Taiwan",
   "USA",
   "Australia",
   "New Zealand",

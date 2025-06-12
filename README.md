@@ -1,5 +1,6 @@
 ## Purpose
-- A cute website I wrote for my gf seawhaii to ask her out for Valentine
+
+- A cute website I wrote for my gf with the design of a game we both play, TFT
 
 ## Authors
 
@@ -9,4 +10,3 @@
 
 - Nextjs
 - Tailwind
-- Firebase
